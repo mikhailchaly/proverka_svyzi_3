@@ -1,0 +1,58 @@
+GET http://localhost:8000/api/v1/product/
+
+###
+
+POST http://localhost:8000/api/v1/product/
+Content-Type: application/json
+
+{
+   "name": "Kolbasa",
+   "description": "Kolbasnye izdeliy"
+}
+
+###
+
+POST http://localhost:8000/api/v1/contact/
+Content-Type: application/json
+
+{
+    "user": 1,
+    "city": "Moscow",
+    "street": "Lenina",
+    "house": "23b",
+    "apartment": "45",
+    "phone": "89881234567"
+}
+
+
+###
+
+POST http://localhost:8000/api/v1/shop/
+Content-Type: application/json
+
+{
+    "user": 1,
+    "name": "Magnit",
+    "positions": [
+       {"product": 1, "quantity": 23, "price": 45},
+       {"product": 2, "quantity": 45, "price": 60},
+       {"product": 3, "quantity": 55, "price": 180}
+    ]
+}
+
+###
+
+POST http://localhost:8000/api/v1/order/
+Content-Type: application/json
+
+{
+    "user": 1,
+    "shop": 1,
+    "order_item": [
+        {"quantity": 10, "product": 10}
+        ]
+}
+
+###
+
+DELETE http://localhost:8000/api/v1/shop/3/
